@@ -11,10 +11,6 @@ CORS(app)
 cache_data = {}     
 cache_day = {}
 
-@app.route("/status", methods=["GET"])
-def status():
-    return jsonify({"running": True})
-
 @app.route("/main", methods=["POST"])
 def main():
     data = request.get_json()
