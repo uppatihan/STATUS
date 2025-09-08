@@ -1,0 +1,17 @@
+
+
+# FRONTEND
+------ Direct to Floder Public (Web Page)
+# \STATUS\public>
+    ------ Open Terminal and Run Command
+    -> python -m http.server 8000
+    # http://127.0.0.1:80
+
+
+
+# BACKEND
+------ Direct to Floder backend
+# \STATUS\backend>
+    ------ Run File main
+    -> python main.py
+    # http://127.0.0.1:8001

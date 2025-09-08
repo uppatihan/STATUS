@@ -6,6 +6,8 @@ import pandas as pd
 
 
 app = Flask(__name__)
+# app = Flask(__name__, static_folder="../public", static_url_path="/")
+
 CORS(app)
 
 cache_data = {}     
@@ -84,6 +86,11 @@ def download_file():
     print(f"🔄️ End Download")
     return send_file(filename, as_attachment=True), 200
 
-    
+@app.route("/")
+def check():
+    # return app.send_static_file("index.html")
+    return jsonify(status="OK", message="Ready to use", permission="true")
+
 if __name__ == "__main__":
-    app.run(debug=True)
+    # app.run(debug=True)
+    app.run(host="0.0.0.0", port=8001, debug=True)
